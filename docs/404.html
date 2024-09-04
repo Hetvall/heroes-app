@@ -11,8 +11,9 @@
 
 <body>
   <script type="text/javascript">
-    var url = window.location.pathname.replace('/heroes-app/', '');
-    window.location.href = '/heroes-app/' + url;
+    if (!location.pathname.endsWith('/') && !location.pathname.endsWith('index.html')) {
+      location.href = '/heroes-app/';
+    }
   </script>
 </body>
 
