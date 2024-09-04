@@ -12,7 +12,7 @@ export class LoginPageComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   onLogin(): void {
-    this.authService.login('James@gmail.com', '123456').subscribe((user) => {
+    this.authService.login().subscribe((user) => {
       this.router.navigate(['/']);
     });
   }

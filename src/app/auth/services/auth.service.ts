@@ -18,7 +18,7 @@ export class AuthService {
     return structuredClone(this.user);
   }
 
-  login(email: string, password: string): Observable<User> {
+  login(): Observable<User> {
     return this.http.get<User>(`${this.baseUrl}/users/1`).pipe(
       tap((user) => (this.user = user)),
       tap((user) => localStorage.setItem('token', 'ssssssss.sssssss.sssssss'))
